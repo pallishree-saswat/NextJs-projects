@@ -39,7 +39,7 @@ function LoginModal() {
         fullWidth={fullWidth}
         maxWidth={maxWidth}
         open={open}
-        onClose={handleClose}
+        
       >
         <DialogTitle>Optional sizes</DialogTitle>
         <DialogContent>

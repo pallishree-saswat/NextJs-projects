@@ -16,6 +16,7 @@ const Slider = dynamic(
   { ssr: false }
 );
 
+import SignupForm from '../component/SignupForm'
 
 function home() {
   return (
@@ -166,6 +167,7 @@ function home() {
           </div>
         </div>
       </section>
+      <SignupForm/>
     </div>
   );
 }

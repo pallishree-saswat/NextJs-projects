@@ -417,7 +417,7 @@ p{
     margin: 0 auto;
     position: relative;
 }
-.pl4s input[type="tel"] {
+.pl4s input[type="tel"], input[type="text"], input[type="email"], input[type="password"] {
     box-shadow: inset 5px 5px 4px -1px #cbd2db, 2px 5px 16px 0px #e5ecf6, inset -2px -2px 4px 1px #fff;
     border: none;
     height: 40px;
@@ -430,6 +430,16 @@ p{
     font-size: 14px;
     font-weight: 500;
 }
+
+.pl4s p{
+  position: absolute;
+  left: 10px;
+  top: -25px;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
 .pl4s span {
     position: absolute;
     left: 16px;

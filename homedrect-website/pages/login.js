@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 
-const Signup = () => {
+const Login = () => {
   const [open, setOpen] = useState(false);
   const [fullWidth, setFullWidth] = useState(true);
   const [maxWidth, setMaxWidth] = useState("md");
@@ -34,11 +34,9 @@ const Signup = () => {
     setFullWidth(event.target.checked);
   };
 
-  const [name, setName] = useState("pallishree");
+ 
   const [email, setEmail] = useState("pallishreeb@thecloudriders.com");
   const [password, setPassword] = useState("123456");
-  const [confirmPassword, setConfirmPassword] = useState("123456");
-  const [phoneNumber, setPhoneNumber] = useState("8144128737");
   const [loading, setLoading] = useState(false);
 
   const Router = useRouter();
@@ -48,13 +46,13 @@ const Signup = () => {
     console.table({ name, email, password });
     try {
         setLoading(true);
-        const { data } = await axios.post(`http://localhost:8000/api/user/register`, {
-          name,
+        const { data } = await axios.post(`http://localhost:8000/api/user/login`, {
+ 
           email,
           password,
-          phoneNumber
+
         });
-        Router.push('/verify')
+        Router.push('/home')
         toast(data.message);
         setLoading(false);
       } catch (err) {
@@ -86,18 +84,7 @@ const Signup = () => {
                   Register
                 </h2>
                 <form>
-                  <div class="pl4s">
-                    <p>Enter Your Name</p>
-                    <input
-                      type="text"
-                      name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                    <span>
-                      <i class="fa fa-user"></i>
-                    </span>
-                  </div>
+              
                   <div class="pl4s">
                     <p>Enter Your Email</p>
                     <input
@@ -110,18 +97,7 @@ const Signup = () => {
                       <i class="fa fa-envelope"></i>
                     </span>
                   </div>
-                  <div class="pl4s">
-                    <p>Enter Your Phone number</p>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                    />
-                    <span>
-                      <i class="fa fa-phone"></i>+91-
-                    </span>
-                  </div>
+              
                   <div class="pl4s">
                     <p>Enter Your Password</p>
                     <input
@@ -134,23 +110,12 @@ const Signup = () => {
                       <i class="fa fa-key"></i>
                     </span>
                   </div>
+            
                   <div class="pl4s">
-                    <p>Confirm Password</p>
-                    <input
-                      type="password"
-                      name="confirmPassword"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                    />
-                    <span>
-                      <i class="fa fa-key"></i>
-                    </span>
-                  </div>
-                  <div class="pl4s">
-                    <button onClick={handleSubmit} class="submitBtn"> Register </button>
+                    <button onClick={handleSubmit} class="submitBtn">Login </button>
                   </div>
                 </form>
-                <Link href="/login"> Already have an account? Login</Link>
+                <Link href="/signup">Dont have an account? Register here</Link>
               </div>
             </div>
           </Box>
@@ -163,4 +128,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

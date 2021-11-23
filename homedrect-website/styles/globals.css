@@ -417,18 +417,32 @@ p{
     margin: 0 auto;
     position: relative;
 }
-.pl4s input[type="tel"], input[type="text"], input[type="email"], input[type="password"] {
+.pl4s input[type="tel"]{
     box-shadow: inset 5px 5px 4px -1px #cbd2db, 2px 5px 16px 0px #e5ecf6, inset -2px -2px 4px 1px #fff;
     border: none;
     height: 40px;
     width: 100%;
     border-radius: 8px;
     background: #e5ecf6;
-    margin-bottom: 17px;
+    margin-bottom: 27px;
     padding-left: 78px;
     color: #95a7be;
     font-size: 14px;
     font-weight: 500;
+}
+
+.pl4s  input[type="text"], input[type="email"], input[type="password"] {
+  box-shadow: inset 5px 5px 4px -1px #cbd2db, 2px 5px 16px 0px #e5ecf6, inset -2px -2px 4px 1px #fff;
+  border: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  background: #e5ecf6;
+  margin-bottom: 27px;
+  padding-left: 40px;
+  color: #95a7be;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .pl4s p{
@@ -456,6 +470,16 @@ p{
     font-size: 23px;
     font-weight: 600;
     padding: 5px 50px;
+}
+
+ .submitBtn{
+  background: #e5ecf6;
+  border: none;
+  box-shadow: 5px 5px 4px 0px #c9cfd7, 2px 5px 15px 0px #e5ecf6, 0px 1px 6px 3px #fff;
+  color: #95a7be;
+  font-size: 23px;
+  font-weight: 600;
+  padding: 5px 50px;
 }
 .pl4s span .fa {
     padding-right: 7px;
